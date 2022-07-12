@@ -2,8 +2,9 @@
 import requests
 import json
 import time
+from ops import key
 
-AUTH_KEY = "617cfdd7-a960-48fa-a947-9735f8d4a1b8:fx"
+AUTH_KEY = key # You can get a key in deepl.com
 
 path = "/home/daniel/Documents/Projects/translator/output/dreams-xie-anshuo.txt"
 
