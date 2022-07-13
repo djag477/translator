@@ -48,13 +48,13 @@ for i in lines:
 keep_vid = input("To keep the video input '-k', to delete, input '-x' ")
 
 if subs == "--write-auto-sub":
-    opts = [video, f"{keep_vid}", "--audio-format", "mp3", f"{subs}", "-o", '/home/daniel/Documents/translator_output/%(title)s.%(ext)s']
+    opts = [video, f"{keep_vid}", "--audio-format", "mp3", f"{subs}", "-o", './%(title)s.%(ext)s']
     
 
 else: 
     print(help_list)
     sub_lang = int(input("Index of subs to use: "))
-    opts = [video, f"{keep_vid}", "--audio-format", "mp3", f"{subs}", "--sub-lang", help_list[sub_lang], "-o", '/home/daniel/Documents/translator_output/%(title)s.%(ext)s']
+    opts = [video, f"{keep_vid}", "--audio-format", "mp3", f"{subs}", "--sub-lang", help_list[sub_lang], "-o", './%(title)s.%(ext)s']
     
 
 youtube_dl.main(opts)
